@@ -1,0 +1,444 @@
+/* Обнуление */
+*{
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+*,*:before,*:after{
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+:focus,:active{outline: none;}
+a:focus,a:active{outline: none;}
+
+nav,footer,header,aside{display: block;}
+
+html,body{
+	/* height: 100%;
+	width: 100%; */
+	font-size: 100%;
+	line-height: 1;
+	font-size: 14px;
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+input,button,textarea{font-family:inherit;}
+
+input::-ms-clear{display: none;}
+button{cursor: pointer;}
+button::-moz-focus-inner {padding:0;border:0;}
+a, a:visited{text-decoration: none;}
+a:hover{text-decoration: none;}
+ul li{list-style: none;}
+img{vertical-align: top;}
+/*--------------------*/
+/* подключение шрифтов */
+
+@import url(https://fonts.googleapis.com/css?family=Montserrat:500,600);
+@font-face {
+    font-family: 'Bebas Neue';
+    src: local('Bebas Neue'),
+         url('/fonts/BebasNeue-Bold.ttf');
+      font-weight: 700;
+  }
+@font-face {
+    font-family: 'Gotham Pro';
+    src: local('Gotham Pro'),
+            url('/fonts/GothamPro.woff2');
+        font-weight: 400;
+ }
+
+/*--------------------*/
+.woman-page {
+    height: 100%;
+    color: #FFFFFF;
+    background-color:#251C21; 
+    margin-bottom: 87px;
+    overflow: hidden;
+}
+.woman-page__banner {
+    height: 100%; 
+    position: relative;
+}
+.woman-page__container {
+    max-width: 1485px;
+    margin: 0 auto; 
+}
+.woman-page__block {
+    padding: 181px 0 0 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    z-index: 5;
+}
+.woman-page__banner::before{
+    content: "";
+   position: absolute;
+   bottom: 0;
+   right: 310px;
+   background-image: url('../img/wooman.png');
+   background-repeat: no-repeat;
+   background-position: center;
+   max-width: 561px;
+   width: 100%;
+   height: 767px; 
+   z-index: 3;
+}
+.woman-page__banner::after{
+    content: "";
+    background-image: url('../img/background.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    max-width: 1210px;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    bottom: 0;
+    right: -60px;
+    z-index: 2;
+}
+.woman-page-block__title{
+    margin-bottom: 146px;
+    font-family: Bebas Neue;
+    font-weight: 700;
+    font-size: 100px;
+    line-height: 105px;
+    max-width: 550px;
+}
+.woman-page__mobile{
+    display: none;
+}
+.woman-page-block__buttons {
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    gap: 43px;
+    padding-bottom: 131px;
+}
+.woman-page-block__record-btn{
+    z-index: 5;
+}
+.record-btn__link {
+    color: #FFFFFF;
+    text-align: center;
+    font-weight: 400;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    font-size: 18px;
+    line-height: 30px;
+    background: #B53A66;
+    border-radius: 3px;
+    max-width: 421px;
+    padding: 17px 52px;
+    display: block;
+}
+.record-btn__link:hover{
+    background: #c7406f;
+}
+.woman-page-block__video-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    z-index: 5;
+}
+.video-btn__circle:hover{
+    background: #c7406f;
+}
+.video-btn__circle {
+    width: 73px; 
+    height: 73px;
+    background: #8B1A52;
+    border-radius: 50%;
+    position: relative;
+    cursor: pointer;
+}
+.video-btn__circle::before{
+    content: "";
+    position: absolute;
+    top: 45%;
+    left: 45%;
+    width: 0; 
+    height: 0;
+    border-top: 5px solid transparent;
+    border-left: 10px solid #FFFFFF;
+    border-bottom: 5px solid transparent;
+}
+.video-btn__text {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: 0.09em;
+    cursor: pointer;
+}
+.woman-page-block__left{
+    z-index: 5;
+}
+.woman-page-block__right {
+    font-family: Gotham Pro;
+    font-weight: 400;
+    display: flex;
+    z-index: 5;
+}
+.woman-page-block__text-block{
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+    align-items: flex-end;
+}
+.woman-page-block__quote {
+    font-size: 19px;
+    line-height: 28px;
+    max-width: 300px;
+    width: 100%;
+    position: relative;
+    padding-top: 50px;
+}
+.woman-page-block__quote::before{
+    content: "";
+    position: absolute;
+    top: 57px;
+    left: -62px;
+    background-image: url('../img/icon/cov.svg');
+    background-repeat: no-repeat;
+    width: 38px;
+    height: 25px;
+}
+.woman-page-block__name {
+    opacity: 0.7;
+    font-size: 14px;
+    line-height: 24px;
+    text-align: right;
+    max-width: 329px;
+    width: 100%;
+    font-style: italic;
+}
+.woman-page-block__name p{
+    padding: 0;
+    margin: 0;
+}
+/* адаптив */
+
+@media screen and (max-width: 1610px) {
+    .woman-page__container{
+        max-width: 1300px;
+        padding: 0 10px;
+    }
+    .woman-page__banner::before{
+        max-width: 480px;
+        right: 390px;
+    }
+    .woman-page__banner::after{
+        right: 0;
+    }
+    .woman-page-block__buttons{
+        flex-direction: column-reverse;
+        align-items: flex-start;
+    }
+    .woman-page-block__title{
+        margin-bottom: 100px;
+        font-size: 80px;
+        line-height: 73px;
+    }
+    .woman-page-block__buttons{
+        padding-bottom: 100px;
+    }
+}
+@media screen and (max-width: 1300px) {
+    .woman-page__container{
+        max-width: 1110px;
+    }
+    .woman-page__banner::after{
+        background-size: contain;
+    }
+    .woman-page-block__title{
+        margin-bottom: 80px;
+        font-size: 60px;
+        line-height: 53px;
+    }
+    .woman-page-block__quote{
+        font-size: 18px;
+        line-height: 22px;
+    }
+    .woman-page__banner::before{
+        background-size: cover;
+        height: 700px;
+    }
+    .woman-page-block__buttons{
+        padding-bottom: 80px;
+    }
+    .woman-page{
+        margin-bottom: 57px;
+    }
+}
+@media screen and (max-width: 1110px) {
+    .woman-page__container{
+        max-width: 990px;
+    }
+    .woman-page__banner::before {
+        right: 300px;
+        background-size: contain;
+        height: 600px;
+    }
+    .woman-page__block{
+        padding: 140px 0 0 0;
+    }
+}
+/* стили для больших планшетов - начало */
+@media screen and (max-width: 991px) {
+    .woman-page__container{
+        max-width: 767px;
+    }
+    .woman-page-block__title{
+        margin-bottom: 30px;
+        font-size: 50px;
+        line-height: 57px;
+        max-width: 273px;
+    }
+    .woman-page-block__quote::before{
+        width: 23px;
+        height: 15px;
+        background-size: contain;
+        left: -40px;
+        top: 7px;
+    }
+     .woman-page__banner::before{
+        right: 180px;  
+        height: 450px;  
+    }
+    .woman-page-block__quote{
+        font-size: 14px;
+        line-height: 22px;
+        max-width: 288px;
+        padding-top: 0px;
+    }
+    .woman-page-block__name{
+        font-size: 11px;
+        line-height: 20px;
+    }
+    .video-btn__text{
+        font-size: 14px;
+        line-height: 17px;
+    }
+    .record-btn__link{
+        font-size: 12px;
+        line-height: 20px;
+        max-width: 334px;
+    }
+    .woman-page-block__buttons{
+        padding-bottom: 30px;
+    }
+    .woman-page-block__text-block{
+        gap: 12px;
+    }
+    .woman-page{
+        margin-bottom: 35px;
+    }
+    .woman-page__block{
+        padding: 120px 0 0 0;
+    }
+    .woman-page-block__buttons {
+        gap: 20px;
+    }
+}
+
+/* стили для средних планшетов - начало */
+@media screen and (max-width: 767px) {
+    .woman-page__container{
+        padding: 0 18px;
+    }
+    .woman-page__block{
+        flex-direction: column;
+    }
+    .woman-page-block__title {
+        margin-bottom: 0;
+    }
+    .woman-page__banner::before {
+        right: 0px;
+    }
+    .woman-page-block__name{
+        text-align: left;
+        padding-bottom: 38px;
+        padding-left: 39px;
+    }
+    .woman-page-block__quote{
+        padding-left: 39px;
+    }
+    .woman-page-block__quote::before{
+        left: 0;
+    }
+    .video-btn__circle{
+        width: 56px;
+        height: 56px;
+    }
+    .video-btn__circle::before{
+        border-top: 4px solid transparent;
+        border-left: 8px solid #FFFFFF;
+        border-bottom: 4px solid transparent;
+    }
+    .woman-page-block__quote{
+        max-width: 321px;
+    }
+    .woman-page__block{
+        padding: 90px 0 0 0;
+    }
+    .woman-page-block__buttons{
+        padding-bottom: 25px;
+    }
+    .woman-page__banner::after{
+        display: none;
+    }
+    .woman-page__banner::before{
+     background-position: right bottom;
+    }
+    .woman-page{
+        position: relative;
+    }
+     .woman-page::after{
+        content: "";
+        background: url('../img/background-mobile.png') no-repeat;
+        background-size: cover;
+        width: 100%;
+        height: 712px;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    } 
+}
+@media screen and (max-width: 570px) {
+    .woman-page-block__buttons{
+        gap: 180px;
+    }
+    .woman-page__banner::before{
+        bottom: -50px;
+    }
+}
+/* стили для телефонов - начало */
+@media screen and (max-width: 479px) {
+    .woman-page__banner::before{
+        display: none;
+    }
+    .woman-page__mobile{
+        display: block;
+        position: absolute;
+        bottom: -60px;
+        right: -20px;
+        z-index: 5;
+    }
+    .woman-page::after{
+        background-size: contain;
+        background-position: right bottom;
+        bottom: -60px;
+    }
+    .record-btn__link{
+        padding: 11px 52px 11px 52px;
+    }
+}
+@media screen and (max-width: 335px) {
+    .record-btn__link{
+        padding: 11px 42px 11px 42px;
+    }
+}
